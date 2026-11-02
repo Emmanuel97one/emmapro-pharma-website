@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+.dev.vars
+*.tsbuildinfo
+AGENTS.md
+*Commercial Growth Master Plan*.md

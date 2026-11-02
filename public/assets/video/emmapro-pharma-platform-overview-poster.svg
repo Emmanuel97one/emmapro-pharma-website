@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">EMMAPRO PHARMA platform overview</title>
+  <desc id="description">A polished visual introduction to connected pharmacy operations.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#102b42"/>
+      <stop offset="1" stop-color="#0b674e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="47%" r="62%">
+      <stop offset="0" stop-color="#74d2a7" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#74d2a7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" height="140%" width="140%" x="-20%" y="-20%">
+      <feDropShadow dx="0" dy="18" flood-color="#001a2a" flood-opacity=".28" stdDeviation="20"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <circle cx="1280" cy="170" r="220" fill="none" stroke="#c3f1dc" stroke-opacity=".12" stroke-width="2"/>
+  <circle cx="1280" cy="170" r="285" fill="none" stroke="#c3f1dc" stroke-opacity=".08" stroke-width="2"/>
+  <rect x="88" y="82" width="62" height="62" rx="18" fill="#27a876"/>
+  <path d="M105 115c12-23 32-19 35-18-3 20-18 32-39 29 4-7 9-13 22-18" fill="#fff"/>
+  <text x="174" y="111" fill="#fff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800" letter-spacing="2">EMMAPRO PHARMA</text>
+  <text x="174" y="139" fill="#b9e8d2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650" letter-spacing="3">CONNECTED PHARMACY OPERATIONS</text>
+  <text x="104" y="372" fill="#d0f0df" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="750" letter-spacing="4">A 60-SECOND PLATFORM OVERVIEW</text>
+  <text x="100" y="465" fill="#fff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="67" font-weight="750" letter-spacing="-2">Clarity for every</text>
+  <text x="100" y="542" fill="#fff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="67" font-weight="750" letter-spacing="-2">pharmacy workflow.</text>
+  <text x="104" y="600" fill="#c6d9e3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21">Medicine governance · stock · dispensing · management</text>
+  <g filter="url(#shadow)">
+    <rect x="1080" y="270" width="315" height="315" rx="44" fill="#fff" fill-opacity=".12" stroke="#fff" stroke-opacity=".28" stroke-width="2"/>
+    <circle cx="1238" cy="427" r="91" fill="#fff"/>
+    <path d="M1218 382v90l74-45z" fill="#07875d"/>
+  </g>
+  <rect x="104" y="763" width="1392" height="1" fill="#d6eee4" fill-opacity=".26"/>
+  <text x="104" y="805" fill="#d7ece3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">EMMAPRO TECH</text>
+  <text x="1496" y="805" fill="#d7ece3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" text-anchor="end">60 sec</text>
+</svg>
