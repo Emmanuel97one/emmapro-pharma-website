@@ -3,7 +3,7 @@ import { editions, features, type Locale } from "@/content/product";
 import { guidePages, partnerPages, partnerApplications, solutions } from "@/content/commercial";
 import type { SitePage } from "@/content/site-pages";
 import { featureHref, pageHref, partnerHref, solutionHref } from "@/lib/routes";
-import { Breadcrumbs, CtaBand, Eyebrow, FeatureCard, PageHero, ScreenshotFrame, SectionHeading } from "./sections";
+import { Breadcrumbs, Eyebrow, FeatureCard, PageHero, ScreenshotFrame, SectionHeading } from "./sections";
 import { ContactForm } from "./contact-form";
 import { JsonLd } from "./json-ld";
 import { absoluteUrl } from "@/lib/site-config";
@@ -34,7 +34,6 @@ export function ProductCatalogue({ locale }: { locale: Locale }) {
         ))}
         <aside className="edition-note"><strong>{locale === "en" ? "Complete product catalogue, separate edition entitlements." : "Catalogue complet du produit, droits d’édition distincts."}</strong><p>{locale === "en" ? "This catalogue describes the finished platform. Advanced capabilities are available according to the Pro, Pro-Plus, Pro Max and Ultra license." : "Ce catalogue décrit la plateforme complète. Les capacités avancées dépendent de la licence Pro, Pro-Plus, Pro Max ou Ultra."}</p><Link className="text-link" href={pageHref("editions", locale)}>{locale === "en" ? "Compare editions" : "Comparer les éditions"} →</Link></aside>
       </div>
-      <div className="container"><CtaBand locale={locale} /></div>
     </>
   );
 }
@@ -64,7 +63,7 @@ export function MarketingPage({ page, locale }: { page: SitePage; locale: Locale
     <>
       {faqSchema && <JsonLd value={faqSchema} />}
       {page.key === "product-tour" && <JsonLd value={videoObjectSchema(locale)} />}
-      <PageHero locale={locale} eyebrow={locale === "en" ? "EMMAPRO PHARMA" : "EMMAPRO PHARMA"} title={title} summary={summary} actions={page.key !== "contact"} />
+      <PageHero locale={locale} eyebrow={locale === "en" ? "EMMAPRO PHARMA" : "EMMAPRO PHARMA"} title={title} summary={summary} />
       <Breadcrumbs locale={locale} items={[{ label: title }]} />
       {page.key === "editions" ? <EditionDetails locale={locale} /> : null}
       {page.key === "contact" ? (
@@ -92,7 +91,6 @@ export function MarketingPage({ page, locale }: { page: SitePage; locale: Locale
           </div>
         </section>
       )) : null}
-      {page.key !== "contact" && page.key !== "product" && page.key !== "product-tour" && page.key !== "editions" && <div className="container"><CtaBand locale={locale} /></div>}
       {page.key === "contact" ? null : null}
     </>
   );
@@ -167,7 +165,6 @@ export function PartnerDetail({ slug, locale }: { slug: string; locale: Locale }
       <PageHero locale={locale} eyebrow={locale === "en" ? "EMMAPRO PARTNER PROGRAMME" : "PROGRAMME PARTENAIRE EMMAPRO"} title={title} summary={locale === "en" ? item.summary : item.summaryFr} />
       <Breadcrumbs locale={locale} items={[{ label: locale === "en" ? "Partners" : "Partenaires", href: pageHref("partners", locale) }, { label: title }]} />
       <section className="section"><div className="container narrative-grid"><div><Eyebrow>{locale === "en" ? "A GOVERNED COMMERCIAL MODEL" : "UN MODÈLE COMMERCIAL ENCADRÉ"}</Eyebrow><h2>{locale === "en" ? "Clear roles. Controlled distribution." : "Des rôles clairs. Une distribution contrôlée."}</h2></div><div><p>{locale === "en" ? item.body : item.bodyFr}</p><ul className="check-list">{(locale === "en" ? item.points : item.pointsFr).map((point) => <li key={point}><span aria-hidden="true">✓</span>{point}</li>)}</ul></div></div></section>
-      <div className="container"><CtaBand locale={locale} /></div>
     </>
   );
 }
@@ -185,7 +182,6 @@ export function SolutionDetail({ slug, locale }: { slug: string; locale: Locale 
       <PageHero locale={locale} eyebrow={locale === "en" ? "PHARMACY SOLUTION" : "SOLUTION PHARMACEUTIQUE"} title={title} summary={locale === "en" ? item.summary : item.summaryFr} />
       <Breadcrumbs locale={locale} items={[{ label: locale === "en" ? "Solutions" : "Solutions", href: pageHref("solutions", locale) }, { label: title }]} />
       <section className="section"><div className="container narrative-grid"><div><Eyebrow>{locale === "en" ? "OPERATING CONTEXT" : "CONTEXTE OPÉRATIONNEL"}</Eyebrow><h2>{locale === "en" ? "Connected capabilities for your operating model." : "Des capacités connectées à votre organisation."}</h2></div><div><p>{locale === "en" ? item.body : item.bodyFr}</p><div className="related-links">{features.slice(0, 5).map((feature) => <Link key={feature.id} href={featureHref(feature.id, locale)}>{locale === "en" ? feature.title : feature.titleFr}<span aria-hidden="true">→</span></Link>)}</div></div></div></section>
-      <div className="container"><CtaBand locale={locale} /></div>
     </>
   );
 }

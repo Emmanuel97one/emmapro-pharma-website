@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { features, productGroups, type Locale } from "@/content/product";
-import { featureHref, pageHref } from "@/lib/routes";
+import { featureHref, pageHref, partnerHref } from "@/lib/routes";
 import { siteConfig } from "@/lib/site-config";
 
 const copy = {
@@ -21,6 +21,7 @@ const copy = {
     footerText: "Complete pharmacy management, inventory intelligence and business control.",
     productGroup: "Platform capabilities",
     company: "Company",
+    partnerGroup: "Partners",
     legal: "Legal",
     guides: "Professional guides",
     email: "Email",
@@ -49,6 +50,7 @@ const copy = {
     footerText: "Gestion complète de pharmacie, intelligence des stocks et pilotage de l’activité.",
     productGroup: "Capacités de la plateforme",
     company: "Entreprise",
+    partnerGroup: "Partenaires",
     legal: "Informations légales",
     guides: "Guides professionnels",
     email: "E-mail",
@@ -166,10 +168,16 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <Link href={pageHref("solutions", locale)}>{text.solutions}</Link>
           <Link href={pageHref("product-tour", locale)}>{text.tour}</Link>
           <Link href={pageHref("editions", locale)}>{text.editions}</Link>
-          <Link href={pageHref("partners", locale)}>{text.partners}</Link>
           <Link href={pageHref("about", locale)}>{text.about}</Link>
           <Link href={pageHref("contact", locale)}>{text.contact}</Link>
           <Link href={pageHref("resources", locale)}>{text.guides}</Link>
+        </div>
+        <div className="footer-column">
+          <h2>{text.partnerGroup}</h2>
+          <Link href={pageHref("partners", locale)}>{text.partners}</Link>
+          <Link href={partnerHref("master-reseller", locale)}>{locale === "en" ? "Master Reseller" : "Revendeur principal"}</Link>
+          <Link href={partnerHref("authorized-reseller", locale)}>{locale === "en" ? "Authorized Reseller" : "Revendeur autorisé"}</Link>
+          <Link href={partnerHref("apply", locale)}>{locale === "en" ? "Become a partner" : "Devenir partenaire"}</Link>
         </div>
         <div className="footer-column">
           <h2>{text.legal}</h2>

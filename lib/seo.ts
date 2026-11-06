@@ -8,12 +8,13 @@ export function localizedMetadata(
   frPath: string,
   title: string,
   description: string,
+  keywords?: string[],
 ): Metadata {
   const currentPath = locale === "en" ? enPath : frPath;
   return {
     title,
     description,
-    keywords: [
+    keywords: keywords ?? [
       "pharmacy management software",
       "pharmacy software",
       "pharmacy stock management",
@@ -103,7 +104,7 @@ export function videoObjectSchema(locale: "en" | "fr") {
       : "Une présentation de 60 secondes de la plateforme de gestion de pharmacie EMMAPRO PHARMA.",
     inLanguage: locale,
     duration: "PT1M",
-    thumbnailUrl: absoluteUrl("/assets/screenshots/emmapro-pharma-medicine-governance.png"),
+    thumbnailUrl: absoluteUrl("/assets/video/emmapro-pharma-platform-overview-poster.svg"),
     contentUrl: absoluteUrl("/assets/video/EMMAPRO_PHARMA_publicite_v2_60s_720p.mp4"),
     publisher: {
       "@type": "Organization",

@@ -15,7 +15,7 @@ export function PageHero({
   eyebrow,
   title,
   summary,
-  actions = true,
+  actions = false,
 }: {
   locale: Locale;
   eyebrow: string;
@@ -109,18 +109,6 @@ export function ScreenshotFrame({
       </div>
       <figcaption>{label}</figcaption>
     </figure>
-  );
-}
-
-export function CtaBand({ locale }: { locale: Locale }) {
-  return (
-    <section className="cta-band">
-      <div>
-        <Eyebrow>{locale === "en" ? "See the platform in context" : "Découvrez la plateforme en situation"}</Eyebrow>
-        <h2>{locale === "en" ? "Bring your pharmacy operations into one clearer view." : "Rassemblez vos opérations dans une vue plus claire."}</h2>
-      </div>
-      <Link className="button button-light" href={pageHref("contact", locale)}>{locale === "en" ? "Request a demo" : "Demander une démo"} <span aria-hidden="true">↗</span></Link>
-    </section>
   );
 }
 

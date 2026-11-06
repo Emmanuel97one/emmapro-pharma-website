@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Feature, Locale } from "@/content/product";
 import { pageHref } from "@/lib/routes";
-import { Breadcrumbs, CtaBand, Eyebrow, PageHero, SectionHeading } from "./sections";
+import { Breadcrumbs, Eyebrow, PageHero, SectionHeading } from "./sections";
 
 const copy = {
   en: {
@@ -298,7 +298,6 @@ export function RemoteAccessPage({ feature, locale }: { feature: Feature; locale
         </div>
       </section>
 
-      <div className="container"><CtaBand locale={locale} /></div>
     </>
   );
 }

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { features, type Feature, type Locale } from "@/content/product";
 import { productPageCopy } from "@/content/product-details";
 import { featureHref, pageHref } from "@/lib/routes";
-import { Breadcrumbs, CtaBand, Eyebrow, PageHero, ScreenshotFrame, SectionHeading } from "./sections";
+import { Breadcrumbs, Eyebrow, PageHero, ScreenshotFrame, SectionHeading } from "./sections";
 import { ProductIllustration } from "./product-illustration";
 
 function localized<T extends Record<Locale, string>>(value: T, locale: Locale) {
@@ -184,7 +184,6 @@ export function ModuleDetailPage({ feature, locale }: { feature: Feature; locale
         </div>
       </section>
 
-      <div className="container"><CtaBand locale={locale} /></div>
     </>
   );
 }

@@ -23,14 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const sitePage = sitePageBySlug(slug, "en");
   if (sitePage) return localizedMetadata("en", `/${sitePage.slug}/`, `/fr/${sitePage.frSlug}/`, sitePage.title, sitePage.summary);
+  const seoPage = seoPageBySlug(slug, "en");
+  if (seoPage) return localizedMetadata("en", `/${seoPage.slug}/`, `/fr/${seoPage.frSlug}/`, seoPage.title, seoPage.summary, seoPage.keywords.en);
   const feature = featureBySlug(slug, "en");
   if (feature) {
     const enPath = featureHref(feature.id, "en");
     const frPath = featureHref(feature.id, "fr");
     return localizedMetadata("en", enPath, frPath, feature.title, feature.summary);
   }
-  const seoPage = seoPageBySlug(slug, "en");
-  if (seoPage) return localizedMetadata("en", `/${seoPage.slug}/`, `/fr/${seoPage.frSlug}/`, seoPage.title, seoPage.summary);
   return {};
 }
 
@@ -41,9 +41,9 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
     if (sitePage.key === "product") notFound();
     return <SiteFrame locale="en" alternateHref={`/fr/${sitePage.frSlug}/`}><MarketingPage page={sitePage} locale="en" /></SiteFrame>;
   }
-  const feature = featureBySlug(slug, "en");
-  if (feature) return <SiteFrame locale="en" alternateHref={featureHref(feature.id, "fr")}><FeaturePage feature={feature} locale="en" /></SiteFrame>;
   const seoPage = seoPageBySlug(slug, "en");
   if (seoPage) return <SiteFrame locale="en" alternateHref={`/fr/${seoPage.frSlug}/`}><SeoLanding page={seoPage} locale="en" /></SiteFrame>;
+  const feature = featureBySlug(slug, "en");
+  if (feature) return <SiteFrame locale="en" alternateHref={featureHref(feature.id, "fr")}><FeaturePage feature={feature} locale="en" /></SiteFrame>;
   notFound();
 }

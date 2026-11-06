@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { editions, features, type Locale } from "@/content/product";
 import { guidePages, partnerPages } from "@/content/commercial";
 import { featureHref, pageHref, partnerHref } from "@/lib/routes";
-import { CtaBand, Eyebrow, FeatureCard, ScreenshotFrame, SectionHeading } from "./sections";
+import { Eyebrow, FeatureCard, SectionHeading } from "./sections";
 import { ProductVideo } from "./product-video";
 import { JsonLd } from "./json-ld";
 import { videoObjectSchema } from "@/lib/seo";
@@ -10,7 +11,7 @@ import { videoObjectSchema } from "@/lib/seo";
 const homeCopy = {
   en: {
     heroEyebrow: "EMMAPRO PHARMA · PHARMACY MANAGEMENT SOFTWARE",
-    heroTitle: "Pharmacy Management Software for Stock, POS, Finance and Multi-Site Operations.",
+    heroTitle: "Complete pharmacy management. Clearer operational control.",
     heroText: "EMMAPRO PHARMA helps pharmacies manage medicine governance, stock, dispensing, billing, finance, expiry controls and multi-site operations in one connected platform.",
     explore: "Explore the platform",
     loginNote: "For pharmacy teams · Commercial platform",
@@ -43,14 +44,15 @@ const homeCopy = {
     editionsTitle: "Start with the core. Extend when your operation needs more.",
     editionsText: "Every edition builds on the one before it. The Main Pharmacy Server PC is separate and does not count as a Client PC.",
     partnerEyebrow: "EMMAPRO PARTNER PROGRAMME",
-    partnerTitle: "Bring pharmacy-management technology to your market.",
-    partnerText: "EMMAPRO Tech works with Master Resellers and Authorized Resellers through controlled License Allocations and agreed partner terms.",
+    partnerTitle: "Become an EMMAPRO Partner",
+    partnerText: "Distribute professional pharmacy-management technology in your market through our Master Reseller or Authorized Reseller programs.",
     securityTitle: "Controlled access. Separate environments.",
     securityText: "User roles and audit visibility support accountable operations. The public website stays separate from the private customer application and pharmacy databases.",
     resourcesTitle: "Professional resources for pharmacy teams",
     resourcesText: "A focused guide library for the management topics behind the software.",
-    finalTitle: "See how EMMAPRO could fit your pharmacy.",
-    finalText: "Request a product demonstration or talk with the team about an approved partner path.",
+    finalCtaEyebrow: "SEE EMMAPRO IN YOUR PHARMACY",
+    finalCtaTitle: "Ready to explore a clearer way to manage pharmacy operations?",
+    finalCtaText: "Tell us about your operation and request a guided EMMAPRO PHARMA demonstration.",
     learn: "Learn more",
     viewEditions: "Compare editions",
     allFeatures: "View all capabilities",
@@ -63,7 +65,7 @@ const homeCopy = {
   },
   fr: {
     heroEyebrow: "EMMAPRO PHARMA · LOGICIEL DE GESTION DE PHARMACIE",
-    heroTitle: "Logiciel de gestion de pharmacie pour le stock, la caisse, la finance et les multi-sites.",
+    heroTitle: "Gestion pharmaceutique complète. Un pilotage plus clair.",
     heroText: "EMMAPRO PHARMA aide les pharmacies à piloter la gouvernance des médicaments, le stock, la dispensation, la facturation, la finance, le suivi des péremptions et les opérations multi-sites dans une plateforme connectée.",
     explore: "Découvrir la plateforme",
     loginNote: "Pour les équipes de pharmacie · Plateforme professionnelle",
@@ -96,14 +98,15 @@ const homeCopy = {
     editionsTitle: "Commencez par le cœur. Étendez selon vos besoins.",
     editionsText: "Chaque édition reprend le contenu de la précédente. Le serveur principal est distinct et ne compte pas comme poste client.",
     partnerEyebrow: "PROGRAMME PARTENAIRE EMMAPRO",
-    partnerTitle: "Proposez une technologie de gestion pharmaceutique sur votre marché.",
-    partnerText: "EMMAPRO Tech travaille avec des revendeurs principaux et autorisés selon des allocations de licences contrôlées et des conditions convenues.",
+    partnerTitle: "Devenez partenaire EMMAPRO",
+    partnerText: "Distribuez une technologie professionnelle de gestion de pharmacie sur votre marché via nos programmes Revendeur principal ou Revendeur autorisé.",
     securityTitle: "Accès contrôlé. Environnements séparés.",
     securityText: "Les rôles utilisateurs et l’audit soutiennent la responsabilité. Le site public reste séparé de l’application client privée et des bases pharmaceutiques.",
     resourcesTitle: "Ressources professionnelles pour les équipes",
     resourcesText: "Des guides ciblés sur les enjeux de gestion derrière le logiciel.",
-    finalTitle: "Découvrez EMMAPRO pour votre pharmacie.",
-    finalText: "Demandez une démonstration ou échangez sur un parcours partenaire agréé.",
+    finalCtaEyebrow: "DÉCOUVREZ EMMAPRO DANS VOTRE PHARMACIE",
+    finalCtaTitle: "Prêt à découvrir une gestion plus claire des opérations pharmaceutiques ?",
+    finalCtaText: "Présentez-nous votre activité et demandez une démonstration guidée d’EMMAPRO PHARMA.",
     learn: "En savoir plus",
     viewEditions: "Comparer les éditions",
     allFeatures: "Voir toutes les capacités",
@@ -138,17 +141,27 @@ export function HomePage({ locale }: { locale: Locale }) {
             <p className="hero-note"><span className="status-dot" aria-hidden="true" />{text.loginNote}</p>
           </div>
           <div className="hero-visual">
-            <div className="hero-orbit orbit-one" aria-hidden="true" />
-            <div className="hero-orbit orbit-two" aria-hidden="true" />
-            <ScreenshotFrame
-              src="/assets/screenshots/emmapro-pharma-medicine-governance.png"
-              alt={locale === "en" ? "EMMAPRO PHARMA medicine governance interface showing the medicine registry and classification modules" : "Interface EMMAPRO PHARMA de gouvernance des médicaments montrant le registre et les modules de classification"}
-              label={locale === "en" ? "Reviewed EMMAPRO interface · demonstration data" : "Interface EMMAPRO vérifiée · données de démonstration"}
-              width={1558}
-              height={895}
-              priority
-            />
-            <div className="hero-visual-note"><span className="mini-mark">E</span><span><strong>EMMAPRO PHARMA</strong><small>{locale === "en" ? "Connected pharmacy operations" : "Opérations pharmaceutiques connectées"}</small></span></div>
+            <figure className="hero-artwork">
+              <Image
+                src="/assets/illustrations/emmapro-connected-platform.svg"
+                alt={locale === "en"
+                  ? "Illustration of connected pharmacy sites with an original EMMAPRO global dashboard screenshot; operational data is obscured"
+                  : "Illustration de pharmacies connectées avec une capture originale du tableau de bord global EMMAPRO ; les données opérationnelles sont masquées"}
+                width={1440}
+                height={1080}
+                priority
+              />
+              <Image
+                className="hero-dashboard-screen"
+                src="/assets/screenshots/emmapro-pharma-global-dashboard-public.png"
+                alt=""
+                aria-hidden="true"
+                width={1918}
+                height={1011}
+                priority
+              />
+              <figcaption>{locale === "en" ? "Original EMMAPRO dashboard · operational values and identifiers obscured; connected-site diagram is illustrative" : "Tableau de bord EMMAPRO original · valeurs et identifiants opérationnels masqués ; le schéma multi-sites est illustratif"}</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -158,17 +171,6 @@ export function HomePage({ locale }: { locale: Locale }) {
           {text.trust.map((item, index) => <span key={item}><b aria-hidden="true">{["✓", "◉", "▤", "↗", "⌘"][index]}</b>{item}</span>)}
         </div>
       </div>
-
-      <section className="section section-connected">
-        <div className="container connected-grid">
-          <div><Eyebrow>{text.connectedEyebrow}</Eyebrow><h2>{text.connectedTitle}</h2><p>{text.connectedText}</p></div>
-          <div className="connected-visual" aria-label={locale === "en" ? "Connected pharmacy workflow" : "Workflow pharmaceutique connecté"}>
-            <div className="connected-node node-main"><span className="node-symbol">E</span><strong>EMMAPRO</strong><small>PHARMA PLATFORM</small></div>
-            {text.benefits.map((benefit, index) => <div className={`connected-node node-${index + 1}`} key={benefit}><span className="node-index">0{index + 1}</span><strong>{benefit}</strong></div>)}
-            <span className="connection-line line-a" /><span className="connection-line line-b" /><span className="connection-line line-c" /><span className="connection-line line-d" />
-          </div>
-        </div>
-      </section>
 
       <section className="section section-muted">
         <div className="container">
@@ -329,7 +331,20 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <div className="container"><CtaBand locale={locale} /></div>
+      <section className="section section-muted">
+        <div className="container home-final-cta">
+          <div>
+            <Eyebrow>{text.finalCtaEyebrow}</Eyebrow>
+            <h2>{text.finalCtaTitle}</h2>
+            <p>{text.finalCtaText}</p>
+          </div>
+          <div className="hero-actions">
+            <Link className="button" href={pageHref("contact", locale)}>{text.contact}<span aria-hidden="true">↗</span></Link>
+            <Link className="button button-secondary" href={pageHref("product", locale)}>{text.explore}<span aria-hidden="true">→</span></Link>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }

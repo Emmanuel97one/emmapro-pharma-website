@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" fill="none" role="img" aria-labelledby="platform-title platform-description">
+  <title id="platform-title">EMMAPRO PHARMA dashboard in a connected pharmacy network</title>
+  <desc id="platform-description">A redacted original EMMAPRO dashboard appears inside an illustrative laptop with connected pharmacy locations.</desc>
+  <defs>
+    <linearGradient id="backdrop" x1="140" y1="100" x2="1300" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FBFA"/>
+      <stop offset=".52" stop-color="#EDF6F2"/>
+      <stop offset="1" stop-color="#F4F7FC"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="495" y1="320" x2="970" y2="825" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C3853"/>
+      <stop offset="1" stop-color="#10243B"/>
+    </linearGradient>
+    <linearGradient id="base" x1="417" y1="795" x2="1040" y2="879" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9E3E8"/>
+      <stop offset=".5" stop-color="#F8FBFC"/>
+      <stop offset="1" stop-color="#C9D6DE"/>
+    </linearGradient>
+    <linearGradient id="storefront" x1="120" y1="478" x2="407" y2="785" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9F3EF"/>
+    </linearGradient>
+    <linearGradient id="cloud" x1="762" y1="104" x2="1064" y2="304" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EAF3FF"/>
+    </linearGradient>
+    <filter id="shadow" x="257" y="239" width="942" height="718" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="24"/>
+      <feGaussianBlur stdDeviation="25"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.071 0 0 0 0 0.165 0 0 0 0 0.263 0 0 0 0.18 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="smallShadow" x="77" y="413" width="359" height="410" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="13"/>
+      <feGaussianBlur stdDeviation="15"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.071 0 0 0 0 0.165 0 0 0 0 0.263 0 0 0 0.12 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="cloudShadow" x="725" y="85" width="375" height="278" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="12"/>
+      <feGaussianBlur stdDeviation="13"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.071 0 0 0 0 0.165 0 0 0 0 0.263 0 0 0 0.13 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1440" height="1080" rx="38" fill="url(#backdrop)"/>
+  <circle cx="1127" cy="199" r="205" fill="#D9EEE5" fill-opacity=".52"/>
+  <circle cx="238" cy="873" r="210" fill="#DCE8FA" fill-opacity=".48"/>
+  <path d="M66 893C287 782 414 856 577 939c180 92 431 67 786-94" stroke="#D8E9E1" stroke-width="2"/>
+  <path d="M67 932c217-95 376-48 539 29 184 87 423 63 749-82" stroke="#E4EBF3" stroke-width="2"/>
+
+  <path d="M373 631c91-35 133-81 198-142 77-73 104-165 204-205" stroke="#78B99C" stroke-width="5" stroke-linecap="round" stroke-dasharray="3 17"/>
+  <path d="M1040 367c83 51 130 116 156 206 20 68 51 105 109 137" stroke="#78B99C" stroke-width="5" stroke-linecap="round" stroke-dasharray="3 17"/>
+  <circle cx="575" cy="489" r="9" fill="#07875D"/>
+  <circle cx="775" cy="284" r="9" fill="#2867E8"/>
+  <circle cx="1196" cy="710" r="9" fill="#07875D"/>
+
+  <g filter="url(#smallShadow)">
+    <rect x="112" y="459" width="289" height="318" rx="28" fill="url(#storefront)" stroke="#D3E4DC" stroke-width="3"/>
+    <path d="M135 505h243l-19-63H154l-19 63Z" fill="#0B7958"/>
+    <path d="M135 505h243v31H135z" fill="#FFFFFF"/>
+    <path d="M135 505h40v31h-40zM216 505h41v31h-41zM297 505h40v31h-40z" fill="#E8F4EE"/>
+    <path d="M156 444h203" stroke="#FFFFFF" stroke-opacity=".6" stroke-width="5" stroke-linecap="round"/>
+    <rect x="144" y="536" width="225" height="215" rx="10" fill="#FFFFFF" stroke="#DBE7E1" stroke-width="3"/>
+    <path d="M255 537v214" stroke="#DFE9E4" stroke-width="3"/>
+    <path d="M164 571h70v158h-70z" fill="#F2F8F5"/>
+    <path d="M275 571h76v158h-76z" fill="#EFF6F3"/>
+    <path d="M180 606h39M180 630h39M180 654h39M180 678h39" stroke="#C0D9CC" stroke-width="5" stroke-linecap="round"/>
+    <path d="M294 606h37M294 630h37M294 654h37M294 678h37" stroke="#C0D9CC" stroke-width="5" stroke-linecap="round"/>
+    <path d="M245 600v33M229 616h33" stroke="#07875D" stroke-width="9" stroke-linecap="round"/>
+    <rect x="158" y="766" width="196" height="9" rx="4.5" fill="#B5CFC2"/>
+  </g>
+
+  <g filter="url(#cloudShadow)">
+    <path d="M836 153c0-36 29-65 65-65 28 0 52 18 61 43 9-5 20-8 31-8 37 0 67 30 67 67 0 37-30 67-67 67H836c-29 0-52-23-52-52 0-27 20-49 46-52 4 0 6 0 6 0Z" fill="url(#cloud)" stroke="#D5E4F0" stroke-width="3"/>
+    <path d="M938 149v71M913 193l25 27 25-27" stroke="#2867E8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="938" cy="140" r="7" fill="#07875D"/>
+    <circle cx="904" cy="233" r="6" fill="#7DA9F3"/>
+    <circle cx="971" cy="233" r="6" fill="#7DA9F3"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="337" y="285" width="714" height="482" rx="30" fill="#122A43"/>
+    <rect x="354" y="302" width="680" height="448" rx="18" fill="url(#screen)"/>
+    <path d="M294 767h801l-80 80H376l-82-80Z" fill="url(#base)" stroke="#BFCED7" stroke-width="3"/>
+    <path d="M413 788h568l-47 45H461l-48-45Z" fill="#D6E0E5"/>
+    <path d="M294 767h801" stroke="#F8FBFC" stroke-width="6" stroke-linecap="round"/>
+    <rect x="637" y="791" width="114" height="31" rx="10" fill="#BBCBD3"/>
+  </g>
+
+  <g>
+    <rect x="1126" y="520" width="210" height="183" rx="24" fill="#FFFFFF" stroke="#D8E4E9" stroke-width="3"/>
+    <rect x="1148" y="542" width="166" height="19" rx="7" fill="#E9F5EF"/>
+    <path d="M1148 542h32v19h-32zM1189 542h32v19h-32zM1230 542h32v19h-32zM1271 542h43v19h-43z" fill="#B8DDC9"/>
+    <path d="M1148 561h166" stroke="#DCE8E2" stroke-width="3"/>
+    <rect x="1148" y="576" width="166" height="105" rx="9" fill="#F5F9F7"/>
+    <path d="M1182 576v105M1228 576v105M1274 576v105" stroke="#E0EAE5" stroke-width="3"/>
+    <path d="M1161 600h9m-4.5-4.5v9M1196 622h9m-4.5-4.5v9M1243 600h9m-4.5-4.5v9M1287 642h9m-4.5-4.5v9" stroke="#07875D" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="1330" cy="705" r="19" fill="#E8F5EF" stroke="#FFFFFF" stroke-width="5"/>
+    <path d="M1322 705h16m-8-8v16" stroke="#07875D" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <rect x="127" y="839" width="285" height="80" rx="18" fill="#FFFFFF" stroke="#E0E9ED" stroke-width="2"/>
+    <circle cx="168" cy="879" r="18" fill="#E8F5EF"/>
+    <path d="M160 879h16m-8-8v16" stroke="#07875D" stroke-width="3" stroke-linecap="round"/>
+    <rect x="200" y="864" width="158" height="9" rx="4.5" fill="#73899B"/>
+    <rect x="200" y="883" width="112" height="7" rx="3.5" fill="#C5D2DA"/>
+    <path d="M388 879h73" stroke="#78B99C" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 10"/>
+  </g>
+  <text x="720" y="1018" fill="#64788A" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="middle" letter-spacing=".4">Original dashboard screenshot · operational data obscured</text>
+</svg>
